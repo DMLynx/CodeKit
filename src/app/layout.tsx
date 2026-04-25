@@ -30,7 +30,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${jakarta.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans text-foreground bg-background">
+      <body 
+        className="min-h-full flex flex-col font-sans text-foreground bg-background"
+        suppressHydrationWarning={true}
+      >
         <AuthProvider>
           <Navbar />
           <main className="flex-1 flex flex-col">
